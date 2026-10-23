@@ -12,7 +12,7 @@
 #steps,
 #services,
 #clients {
-  scroll-margin-top: var(--header-h);
+  scroll-margin-top: 1rem;
 }
 
 .section-head {

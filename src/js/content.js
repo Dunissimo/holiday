@@ -53,21 +53,25 @@ export const steps = [
     icon: 'pencil',
     title: 'Замер',
     text: 'Приезжаем, предлагаем/выслушиваем/обсуждаем идеи.',
+    image: '/images/photo_2026-10-23_05-18-21.jpg',
   },
   {
     icon: 'monitor',
     title: 'Эскиз',
     text: 'Показываем визуализацию.',
+    image: '/images/bg-steps.jpg',
   },
   {
     icon: 'wrench',
     title: 'Монтаж',
     text: 'Воплощаем проект в жизнь.',
+    image: '/images/photo_2026-10-23_05-18-30.jpg',
   },
   {
     icon: 'broom',
     title: 'Уборка',
     text: 'Уходим, оставляя красоту и чистоту после себя.',
+    image: '/images/photo_2026-10-23_05-18-32.jpg',
   },
 ];
 

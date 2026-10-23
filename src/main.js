@@ -62,15 +62,19 @@ function renderSteps() {
       (step, index) => `
       <article class="step-slide" style="--i: ${index}">
         <div class="step-slide-inner panel">
-          <p class="section-kicker">Этапы работ · ${String(index + 1).padStart(2, '0')} / ${total}</p>
-          <div class="step-icon">
-            ${icon(step.icon)}
-            <span class="num">${index + 1}</span>
+          <img class="step-photo" src="${step.image}" alt="${step.title}" />
+          <div class="step-copy">
+            <p class="section-kicker">Этапы работ · ${String(index + 1).padStart(2, '0')} / ${total}</p>
+            <div class="step-icon">
+              ${icon(step.icon)}
+              <span class="num">${index + 1}</span>
+            </div>
+            <h3>${step.title}</h3>
+            <p>${step.text}</p>
           </div>
-          <h3>${step.title}</h3>
-          <p>${step.text}</p>
         </div>
-      </article>`,
+      </article>
+      ${index < steps.length - 1 ? '<div class="step-hold" aria-hidden="true"></div>' : ''}`,
     )
     .join('');
 }

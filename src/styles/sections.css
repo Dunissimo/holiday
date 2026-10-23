@@ -3,9 +3,8 @@
   isolation: isolate;
   display: grid;
   align-items: center;
-  min-height: 100svh;
-  margin-top: calc(-1 * var(--header-h));
-  padding: var(--header-h) 0;
+  min-height: calc(100svh - var(--header-h));
+  padding: 0;
   color: var(--white);
 }
 
@@ -112,25 +111,50 @@
   box-sizing: border-box;
   height: 100vh;
   height: 100svh;
-  display: grid;
-  place-items: center;
-  padding: calc(var(--header-h) + 1.5rem) 1.25rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1.5rem 1.35rem;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
   background:
     radial-gradient(ellipse 72% 52% at calc(14% + var(--i, 0) * 14%) 10%, rgba(196, 163, 90, 0.14), transparent 58%),
     radial-gradient(ellipse 64% 48% at calc(92% - var(--i, 0) * 10%) 96%, rgba(22, 36, 58, 0.55), transparent 62%),
     linear-gradient(168deg, #141b28 0%, #0e141e 46%, #090d14 100%);
-  box-shadow: 0 -28px 64px rgba(0, 0, 0, 0.38);
+  box-shadow: 0 -36px 70px rgba(0, 0, 0, 0.45);
+}
+
+.step-hold {
+  height: 42vh;
 }
 
 .step-slide-inner {
   display: grid;
-  justify-items: center;
-  text-align: center;
-  gap: 1.1rem;
-  width: min(36rem, 100%);
-  padding: 2.4rem 1.8rem;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  grid-template-rows: minmax(0, 1fr);
+  align-items: stretch;
+  align-self: center;
+  height: calc(100svh - 2.85rem - 200px);
+  gap: 1.5rem;
+  width: min(68rem, 100%);
+  padding: 0.9rem;
+  text-align: left;
+}
+
+.step-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center 72%;
+  border-radius: 16px;
+}
+
+.step-copy {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 0.75rem;
+  padding: 0.7rem 0.9rem 0.7rem 0.15rem;
 }
 
 .closing {
@@ -180,7 +204,7 @@
 
 @media (max-width: 860px) {
   .hero {
-    padding: var(--header-h) 0;
+    padding: 0;
   }
 
   .hero::after {
@@ -190,6 +214,24 @@
 
   .portfolio-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .step-slide-inner {
+    grid-template-columns: 1fr;
+    align-self: center;
+    height: auto;
+    text-align: center;
+  }
+
+  .step-copy {
+    justify-items: center;
+    padding: 0.2rem 0.6rem 0.8rem;
+  }
+
+  .step-photo {
+    height: min(46vh, 360px);
   }
 }
 
@@ -204,12 +246,16 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .step-hold {
+    display: none;
+  }
+
   .step-slide {
     position: relative;
     top: auto;
     height: auto;
     padding: 4rem 1.25rem;
     scroll-snap-align: none;
-    scroll-snap-stop: normal;
+    box-shadow: none;
   }
 }
