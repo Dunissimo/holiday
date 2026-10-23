@@ -1,0 +1,28 @@
+:root {
+  --night: #07080d;
+  --night-deep: #04050a;
+  --night-mid: #12151f;
+  --gold: #c4a35a;
+  --gold-hover: #d4b56c;
+  --gold-dark: #9a7c3a;
+  --gold-soft: rgba(196, 163, 90, 0.22);
+  --ink: #f4efe6;
+  --ink-muted: rgba(244, 239, 230, 0.68);
+  --white: #ffffff;
+  --line: rgba(244, 239, 230, 0.14);
+  --shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
+  --page-gradient:
+    radial-gradient(1200px 700px at 78% 8%, rgba(196, 163, 90, 0.16), transparent 52%),
+    radial-gradient(900px 620px at 12% 88%, rgba(38, 52, 78, 0.55), transparent 58%),
+    linear-gradient(165deg, #0b1018 0%, #07080d 42%, #121018 72%, #08070b 100%);
+  --hero-image: url('/images/bg-steps.jpg');
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', system-ui, sans-serif;
+
+  --container: 1180px;
+  --header-h: 84px;
+  --radius-card: 22px;
+  --radius-pill: 999px;
+  --space: 1rem;
+}
