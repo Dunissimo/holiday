@@ -3,13 +3,12 @@
   top: 0;
   z-index: 40;
   height: var(--header-h);
-  background: rgba(7, 8, 13, 0.55);
-  border-bottom: 1px solid transparent;
+  background: rgba(7, 8, 13, 0.92);
+  border-bottom: 1px solid var(--line);
 }
 
 .site-header.is-scrolled {
-  background: rgba(7, 8, 13, 0.88);
-  border-bottom-color: var(--line);
+  background: rgba(7, 8, 13, 0.96);
 }
 
 .header-inner {
@@ -115,49 +114,55 @@
   transform: translateY(1px);
 }
 
-.service-card {
-  min-width: 0;
-}
-
-.service-card img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center bottom;
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
   border-radius: var(--radius-card);
+  box-shadow: var(--shadow);
 }
 
-.service-card p {
-  margin-top: 0.85rem;
-  font-size: 0.92rem;
-  text-align: center;
-  color: var(--ink-muted);
-}
-
-.video-card {
+.media-card {
   position: relative;
+  min-width: 0;
   overflow: hidden;
-  border-radius: var(--radius-card);
-  background: var(--night-mid);
-  cursor: pointer;
-  border: 0;
   padding: 0;
   width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--night-mid);
+  box-shadow: var(--shadow);
 }
 
-.video-card video {
+.media-card img,
+.media-card video {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center bottom;
+}
+
+.media-card-caption {
+  position: absolute;
+  inset: auto 0 0;
+  margin: 0;
+  padding: 2.4rem 1rem 1rem;
+  background: linear-gradient(180deg, transparent, rgba(7, 8, 13, 0.92));
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--ink);
+}
+
+.video-card {
+  cursor: pointer;
 }
 
 .video-card .play-badge {
   position: absolute;
-  inset: auto 0.8rem 0.8rem auto;
+  inset: auto 0.85rem 0.85rem auto;
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: rgba(196, 163, 90, 0.92);
+  background: var(--gold);
   color: var(--white);
   display: grid;
   place-items: center;
@@ -167,11 +172,12 @@
 .step-icon {
   width: 96px;
   height: 96px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 1px solid var(--line-strong);
   border-radius: 50%;
   display: grid;
   place-items: center;
   position: relative;
+  background: rgba(196, 163, 90, 0.08);
 }
 
 .step-icon svg {
@@ -195,34 +201,35 @@
 
 .step-slide-inner h3 {
   font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-size: clamp(2.2rem, 4.4vw, 3.6rem);
   font-weight: 500;
   letter-spacing: 0.02em;
 }
 
 .step-slide-inner p:last-child {
-  font-size: 1.15rem;
+  font-size: 1.08rem;
   line-height: 1.55;
   color: var(--ink-muted);
 }
 
 .client-card {
-  min-height: 110px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 16px;
+  min-height: 132px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--panel);
   display: grid;
   place-items: center;
   text-align: center;
-  padding: 1rem;
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 0.88rem;
+  padding: 1.2rem 1rem;
+  color: var(--ink);
+  font-size: 0.92rem;
 }
 
 .client-card svg {
-  width: 28px;
-  height: 28px;
-  margin-bottom: 0.45rem;
-  opacity: 0.8;
+  width: 22px;
+  height: 22px;
+  margin-bottom: 0.55rem;
+  color: var(--gold);
 }
 
 .modal {
@@ -247,10 +254,10 @@
 .modal-dialog {
   position: relative;
   width: min(440px, 100%);
-  background: linear-gradient(180deg, #161822, #0c0e14);
+  background: var(--night-mid);
   color: var(--ink);
   border: 1px solid var(--line);
-  border-radius: 24px;
+  border-radius: var(--radius-card);
   padding: 2rem 1.6rem 1.6rem;
   box-shadow: var(--shadow);
 }

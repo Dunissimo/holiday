@@ -17,7 +17,7 @@ export const hero = {
   perks: [
     { icon: 'shield', title: 'Гарантия', caption: '5 лет' },
     { icon: 'clock', title: 'Работа', caption: 'в срок' },
-    { icon: 'tools', title: 'Быстрый и качественный', caption: 'монтаж' },
+    { icon: 'tools', title: 'Качественный', caption: 'монтаж' },
   ],
 };
 

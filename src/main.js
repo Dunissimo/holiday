@@ -35,9 +35,9 @@ function renderServices() {
   document.getElementById('services-grid').innerHTML = services
     .map(
       (item) => `
-      <article class="service-card">
+      <article class="media-card">
         <img src="${item.image}" alt="${item.title}" loading="lazy">
-        <p>${item.title}</p>
+        <p class="media-card-caption">${item.title}</p>
       </article>`,
     )
     .join('');
@@ -47,7 +47,7 @@ function renderPortfolio() {
   document.getElementById('portfolio-grid').innerHTML = portfolio
     .map(
       (item) => `
-      <button class="video-card" type="button" data-src="${item.src}" aria-label="Смотреть ${item.title}">
+      <button class="media-card video-card" type="button" data-src="${item.src}" aria-label="Смотреть ${item.title}">
         <video src="${item.src}" muted playsinline preload="metadata" loop></video>
         <span class="play-badge">${icon('play')}</span>
       </button>`,
@@ -61,8 +61,8 @@ function renderSteps() {
     .map(
       (step, index) => `
       <article class="step-slide" style="--i: ${index}">
-        <div class="step-slide-inner">
-          <p class="step-kicker">Этапы работ · ${String(index + 1).padStart(2, '0')} / ${total}</p>
+        <div class="step-slide-inner panel">
+          <p class="section-kicker">Этапы работ · ${String(index + 1).padStart(2, '0')} / ${total}</p>
           <div class="step-icon">
             ${icon(step.icon)}
             <span class="num">${index + 1}</span>

@@ -7,14 +7,16 @@
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
-  background: var(--night-deep);
+  background: var(--page-bg);
+  background-attachment: fixed;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
   font-family: var(--font-sans);
   color: var(--ink);
-  background: var(--page-gradient);
+  background: var(--page-bg);
   background-attachment: fixed;
   min-height: 100%;
   line-height: 1.5;

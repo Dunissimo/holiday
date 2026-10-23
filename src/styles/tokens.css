@@ -9,13 +9,18 @@
   --ink: #f4efe6;
   --ink-muted: rgba(244, 239, 230, 0.68);
   --white: #ffffff;
-  --line: rgba(244, 239, 230, 0.14);
+  --line: rgba(196, 163, 90, 0.22);
+  --line-strong: rgba(196, 163, 90, 0.38);
+  --panel: rgba(18, 21, 31, 0.55);
   --shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
-  --page-gradient:
-    radial-gradient(1200px 700px at 78% 8%, rgba(196, 163, 90, 0.16), transparent 52%),
-    radial-gradient(900px 620px at 12% 88%, rgba(38, 52, 78, 0.55), transparent 58%),
-    linear-gradient(165deg, #0b1018 0%, #07080d 42%, #121018 72%, #08070b 100%);
   --hero-image: url('/images/bg-steps.jpg');
+  --page: #0e141e;
+  --page-bg:
+    radial-gradient(ellipse 90% 55% at 12% -8%, rgba(196, 163, 90, 0.12), transparent 58%),
+    radial-gradient(ellipse 70% 48% at 100% 18%, rgba(36, 52, 82, 0.32), transparent 62%),
+    radial-gradient(ellipse 80% 50% at 8% 92%, rgba(168, 128, 64, 0.08), transparent 56%),
+    radial-gradient(ellipse 60% 40% at 88% 100%, rgba(16, 26, 44, 0.5), transparent 60%),
+    linear-gradient(168deg, #141b28 0%, #0e141e 42%, #090d14 100%);
 
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Manrope', system-ui, sans-serif;
